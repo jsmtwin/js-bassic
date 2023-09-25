@@ -63,5 +63,8 @@ let hocsinh = {
 hocsinh.sdt = 1234546878
 hocsinh.tuoi = 20
 console.log(hocsinh)
+console.log("===================")
+
+
 
 
