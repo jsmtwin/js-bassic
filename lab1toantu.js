@@ -40,6 +40,8 @@ let s = 120
 let t = 130/60
 let v = s/t
 console.log("vận tốc : ", v)
+console.log("==================")
+// hàm số :
 
 
 
