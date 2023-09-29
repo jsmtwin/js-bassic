@@ -56,13 +56,11 @@ let b = 3
 let c = 1
 function phuong_trinh_bac_2 (a,b,c) {
     let denta = b*b - 4 * a * c
-    let x1 = (-b + Math.sqrt(denta))/(2*a)
-    let x2 = (-b - Math.sqrt(denta))/(2*a)
     if (denta <0) {
         return "phương trình vô nghiệm"
     }
     else if (denta ==0) {
-        return ' phương trình có nghiệm x1 = x2 = $(-b/(2*a)'
+        return ` phương trình có nghiệm x1 = x2 = ${-b/(2*a)}`
     }
     else {
         const x1 = (-b + Math.sqrt(denta))/(2*a)
@@ -71,3 +69,21 @@ function phuong_trinh_bac_2 (a,b,c) {
     }
 }
 console.log(phuong_trinh_bac_2(a,b,c))
+// cau 2 - d
+function gia_cuoc_dt(so_phut) {
+    const phi_co_dinh = 25000
+    let tongcp = 0
+    let cp = 0
+    if (so_phut <0 && so_phut<= 50) {
+        cp = so_phut*600
+    }    
+    else if (so_phut >50 && so_phut <= 200)  {
+        cp = 50 * 600 + (so_phut-50) * 400
+        
+    }  else if (so_phut>200) {
+        cp = 500*600 + 150*400 + (so_phut-200) * 200
+    }
+    tongcp = phi_co_dinh + cp
+    return tongcp
+
+}
