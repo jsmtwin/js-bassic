@@ -30,12 +30,70 @@ console.log('trung binh cong : ', trungbinhcong)
 // cau e : dao nguoc phan tu trong mang
 let arr1 = []
 let j = 0
-for(let i = dodaimang -1 ; i>=0 ; i = i - 1) {
+for(let i = dodaimang -1 ; i >= 0 ; i = i - 1) {
     // console.log('arr[%s]', i, arr[i])
     arr1[j] = arr[i]
     j = j + 1
 }
 console.log(arr1)
+// cau f : tim so lan xuat hien moi phan tu trong mang
+const tansuaxuathien = {};
+for (let i = 0 ; i < dodaimang; i = i + 1) {
+const phantuthuI = arr[i];
+tansuaxuathien[phantuthuI] = (tansuaxuathien[phantuthuI]||0) + 1
+}
+console.log('==>', tansuaxuathien)
+
+// cau g : chen phan tu
+for (let i = dodaimang -1; i >= 0 ; i = i -1){
+    arr [i + 1] = arr [i]
+}
+arr [0] = 117
+console.log('do dai mang ban dau', dodaimang)
+console.log('do dai mang luc sau', arr.length)
+console.log(arr)
+// cau h : kiem tra mang moi day so tang dan
+const dodaimangMoi = arr .length
+let checktangdan = true
+for (let i = 0 ; i < dodaimangMoi ;  i = i +1 ){
+    if (arr[i +1] < arr[i]) {
+    checktangdan = false
+    break
+    }
+}    
+if(checktangdan == true) {
+    console.log('mang tang dan')
+
+}
+else {
+    console.log('mang khong tang dan')
+}
+// cau i : sap xep mang theo thu tu tang dan
+for (let i = 0 ; i < arr.length ; i = i + 1){
+    for(let j = i + 1; j < arr.length; j = j + 1){
+        if (arr[i]> arr[i+1]){
+                let tam = arr[i]
+                arr[i] = arr[i + 1]
+                arr[ i+1] = tam
+                // swap(arr[i], arr[i+1])
+            }
+    }
+    // if (arr[i]> arr[i+1]){
+    //     let tam = arr[i]
+    //     arr[i] = arr[i + 1]
+    //     arr[ i+1] = tam
+    //     // swap(arr[i], arr[i+1])
+    // }
+}
+console.log(arr)
+
+
+
+
+
+
+
+
 
 
 
