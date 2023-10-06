@@ -69,24 +69,27 @@ else {
     console.log('mang khong tang dan')
 }
 // cau i : sap xep mang theo thu tu tang dan
-for (let i = 0 ; i < arr.length ; i = i + 1){
-    for(let j = i + 1; j < arr.length; j = j + 1){
-        if (arr[i]> arr[i+1]){
+for (let i = 0 ; i < dodaimangMoi ; i = i + 1){
+    for(let j = i + 1; j < dodaimangMoi; j = j + 1){
+        if (arr[i]> arr[j]){
                 let tam = arr[i]
-                arr[i] = arr[i + 1]
-                arr[ i+1] = tam
-                // swap(arr[i], arr[i+1])
+                arr[i] = arr[j]
+                arr[j] = tam
             }
     }
-    // if (arr[i]> arr[i+1]){
-    //     let tam = arr[i]
-    //     arr[i] = arr[i + 1]
-    //     arr[ i+1] = tam
-    //     // swap(arr[i], arr[i+1])
-    // }
 }
 console.log(arr)
-
+// cau l : sap xep mang theo thu tu giam dan
+for (let i = 0; i < dodaimangMoi; i = i + 1){
+    for(let j = i +1; j< dodaimangMoi; j = j +1){
+        if (arr[i] < arr[j]){
+            let tam = arr[i]
+            arr[i] = arr [j]
+            arr[j] = tam
+        }
+    }
+}
+console.log(arr)
 
 
 
