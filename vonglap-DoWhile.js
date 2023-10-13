@@ -74,6 +74,23 @@ do{
 }while(arr[i] !== undefined)
 arr[0] = 117
 console.log(arr)
+//cau h : kiem tra mang tang dan
+// const dodaimangM = arr.length
+// let checktangdan = true
+// i = 0
+// do{
+//     if(arr[i +1]<arr[i]){
+//         i = i + 1
+//         checktangdan = false
+//         break
+//         }
+//          if(checktangdan == true){
+//         console.log('mang tang dan')
+//          }
+//     else{
+//         console.log('mang khong tang')
+//     }
+// }while(arr[i] !==undefined)
 
 
 // cau i : sap xep theo thu tu tang dan
@@ -92,24 +109,40 @@ do{
     i = i + 1   
 }while(arr[i] !== undefined)
 console.log(arr)
-// cau h :  kiem tra mang tang dan
-const dodaimangM = arr.length
-let checktangdan = true
+// cau j sap xep theo thu tu giam dan
 i = 0
 do{
-    if(arr[i +1]<arr[i]){
-        i = i + 1
-        checktangdan = false
-        break
+    let j = i + 1
+    do{
+        if (arr[i]<arr[j]){
+            let tam = arr[i]
+            arr[i] = arr[j]
+            arr[j] = tam
         }
-         if(checktangdan == true){
-        console.log('mang tang dan')
-         }
-    else{
-        console.log('mang khong tang')
-    }
-}while(arr[i] !==undefined)
+        j = j + 1
 
+    }while(arr[j] !==undefined)
+    i = i + 1   
+}while(arr[i] !== undefined)
+console.log(arr)
+// cau k : liet ke can phan tu la so chan
+i = 0 
+do{
+    if(arr[i] %2 ===0){
+        console.log('so chan : ',arr[i])
+    }
+    i = i + 1
+
+}while(arr[i] !== undefined)
+// cau f : liet ke cac so le
+i = 0
+do{
+    if(arr[i]%2 !==0){
+        console.log('so le :', arr[i])
+    }
+    i = i + 1
+
+}while(arr[i] !==undefined)
 
 
 
